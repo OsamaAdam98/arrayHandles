@@ -1,13 +1,11 @@
 package oop;
 
   class Packet;
+    int field1; 
 
-  int field1; 
-
-  function new(int i);
-    field1 = i;
-  endfunction   
-
+    function new(int i);
+      field1 = i;
+    endfunction   
   endclass : Packet
 
   class sink;
@@ -26,7 +24,6 @@ package oop;
         $display("sink[%0d]: Received packet with field1 = (%0d)", id, stim_pkt.field1);  
       end  
     endtask
-    
   endclass : sink
 
   class source;
@@ -39,7 +36,7 @@ package oop;
         this.out_chan[i] = mBox;
     endfunction 
     
-  task run();
+    task run();
       //for(int i = 0; i <= 2; i++) begin
         for(int j = 0; j < out_chan.size(); j++) begin
           pkt_to_send = new(j);  
