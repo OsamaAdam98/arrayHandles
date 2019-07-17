@@ -1,9 +1,11 @@
 module array_handles;
 
-    import oop::*;
+    import Packet::*;
+    import Source::*;
+    import Sink::*;
 
-    sink snk[];
-    source src[];
+    Sink snk[];
+    Source src[];
     mailbox #(Packet)  src2snk[];
 
     initial begin
