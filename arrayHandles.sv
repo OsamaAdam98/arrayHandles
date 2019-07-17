@@ -34,5 +34,4 @@ module array_handles;
         $display("Finished");
     end
 
-    
 endmodule : array_handles
